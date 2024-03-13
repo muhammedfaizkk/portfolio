@@ -2592,4 +2592,7 @@ body.dark .ryker_tm_settings .cursor li .svg,
 		right: -30px;
 		overflow: hidden;
 	}
+	.avatar{
+		margin-top: 80px;
+	}
   } 
