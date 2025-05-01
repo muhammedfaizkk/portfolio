@@ -38,8 +38,8 @@ const projects = [
     title: 'Arya Premium Auto',
     subtitle: 'UAE-based Coupon Platform',
     description: 'A dynamic coupon purchase and redemption site with full admin control, dynamic banners, and Stripe integration. Built for the UAE market.',
-    image: '/projects/arya.jpg',
-    link: 'https://aryapremiumauto.ae/', // Update if needed
+    image: '/projects/aryapremium.jpg',
+    link: 'https://aryapremiumauto.ae/', 
     github: '#',
     category: 'Full Stack',
     tech: ['React.js', 'PHP', 'MySQL', 'Stripe', 'Tailwind CSS']
