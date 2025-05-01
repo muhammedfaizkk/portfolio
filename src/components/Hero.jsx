@@ -1,9 +1,16 @@
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedinIn, FaTwitter, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import {
+  FaGithub,
+  FaLinkedinIn,
+  FaTwitter,
+  FaInstagram,
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt
+} from 'react-icons/fa';
 import { useEffect, useState } from 'react';
 
 const Hero = ({ darkMode }) => {
-  // Stagger children animation
   const containerVariants = {
     hidden: { opacity: 0 },
     show: {
@@ -27,27 +34,27 @@ const Hero = ({ darkMode }) => {
     phone: "+91 7510657338",
     location: "Malappuram, Kerala, India",
     github: "https://github.com/muhammedfaizkk",
-    linkedin: "https://www.linkedin.com/in/muhammedfaizkk",
+    linkedin: "https://www.linkedin.com/in/muhammed-faiz-kk-19768725a",
   };
 
   return (
-    <section className={`min-h-screen ${darkMode ? 'bg-[#0D0D0D] text-white' : 'bg-white text-gray-900'} py-20 px-4 relative overflow-hidden`}>
+    <section className={`min-h-screen flex items-center justify-center ${darkMode ? 'bg-[#0D0D0D] text-white' : 'bg-white text-gray-900'} py-20 px-4 relative overflow-hidden`}>
       {/* Background gradient elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className={`absolute top-0 left-1/4 w-96 h-96 rounded-full ${darkMode ? 'bg-blue-500/5' : 'bg-blue-100/50'} blur-3xl`}></div>
         <div className={`absolute bottom-0 right-1/4 w-96 h-96 rounded-full ${darkMode ? 'bg-purple-500/5' : 'bg-purple-100/50'} blur-3xl`}></div>
       </div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-6xl mx-auto relative z-10 w-full">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="show"
-          className="flex flex-col items-center text-center mb-20"
+          className="flex flex-col items-center text-center"
         >
           <motion.div
             variants={itemVariants}
-            className="w-48 h-48 rounded-full overflow-hidden mb-8 border-4 border-yellow-500"
+            className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden mb-6 md:mb-8 border-4 border-yellow-500"
           >
             <img
               src="/projects/faiz.jpg"
@@ -55,25 +62,32 @@ const Hero = ({ darkMode }) => {
               className="w-full h-full object-cover"
             />
           </motion.div>
-          
+
           <motion.h1
             variants={itemVariants}
-            className="text-5xl font-bold mb-4"
+            className="text-4xl md:text-5xl font-bold mb-2 md:mb-4"
           >
             {contactInfo.name}
           </motion.h1>
-          
+
           <motion.p
             variants={itemVariants}
-            className="text-2xl text-yellow-500 mb-4"
+            className="text-xl md:text-2xl text-yellow-500 mb-2"
           >
             {contactInfo.title}
           </motion.p>
 
-          {/* Contact Information */}
+          <motion.p
+            variants={itemVariants}
+            className="max-w-xl text-base md:text-lg text-center text-gray-500 dark:text-gray-300 px-4 mb-6"
+          >
+            Experienced web developer with a passion for creating innovative and user-friendly websites. Committed to delivering high-quality work and constantly expanding my skills to stay up-to-date with the latest industry trends.
+          </motion.p>
+
+          {/* Contact Info */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row items-center gap-4 mb-8"
+            className="flex flex-col sm:flex-row items-center gap-4 mb-6"
           >
             <motion.a
               href={`mailto:${contactInfo.email}`}
@@ -88,6 +102,7 @@ const Hero = ({ darkMode }) => {
                 {contactInfo.email}
               </span>
             </motion.a>
+
             <motion.a
               href={`tel:${contactInfo.phone}`}
               whileHover={{ scale: 1.05 }}
@@ -101,6 +116,7 @@ const Hero = ({ darkMode }) => {
                 {contactInfo.phone}
               </span>
             </motion.a>
+
             <motion.div
               whileHover={{ scale: 1.05 }}
               className={`flex items-center gap-2 px-4 py-2 rounded-full ${
@@ -114,9 +130,10 @@ const Hero = ({ darkMode }) => {
             </motion.div>
           </motion.div>
 
+          {/* Social Icons */}
           <motion.div
             variants={itemVariants}
-            className="flex gap-6 mb-8"
+            className="flex gap-6 mb-6"
           >
             {[
               { icon: FaGithub, link: contactInfo.github, label: 'GitHub' },
@@ -137,9 +154,10 @@ const Hero = ({ darkMode }) => {
             ))}
           </motion.div>
 
+          {/* Action Buttons */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-4 mt-12"
+            className="flex flex-col sm:flex-row gap-4 mt-6"
           >
             <motion.a
               href="/resume.pdf"
@@ -154,6 +172,7 @@ const Hero = ({ darkMode }) => {
             >
               DOWNLOAD CV
             </motion.a>
+
             <motion.a
               href="#portfolio"
               whileHover={{ scale: 1.05 }}
@@ -174,4 +193,4 @@ const Hero = ({ darkMode }) => {
   );
 };
 
-export default Hero; 
+export default Hero;

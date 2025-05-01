@@ -22,7 +22,7 @@ const projects = [
     link: 'https://autogridnumberplate.com/',
     github: '#',
     category: 'Full Stack',
-    tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB']
+    tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Razorpay']
   },
   {
     title: 'Kerala Offers',
@@ -34,8 +34,18 @@ const projects = [
     category: 'Full Stack',
     tech: ['MERN Stack', 'Redux', 'JWT', 'Google Maps API']
   },
-  
+  {
+    title: 'Arya Premium Auto',
+    subtitle: 'UAE-based Coupon Platform',
+    description: 'A dynamic coupon purchase and redemption site with full admin control, dynamic banners, and Stripe integration. Built for the UAE market.',
+    image: '/projects/arya.jpg',
+    link: 'https://aryapremiumauto.ae/', // Update if needed
+    github: '#',
+    category: 'Full Stack',
+    tech: ['React.js', 'PHP', 'MySQL', 'Stripe', 'Tailwind CSS']
+  }
 ];
+
 
 const Portfolio = ({ darkMode }) => {
   const [filter, setFilter] = useState('all');
